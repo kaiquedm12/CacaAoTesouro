@@ -50,18 +50,26 @@ class MainActivity : ComponentActivity() {
                 }
                 composable("/tela02") {
                     // Views Composables
-                    Tela(
-                        "Tela 02",
-                        clickB1 = { meuNavController.navigate("/tela03") },
-                        clickB2 = { meuNavController.navigate("/home") }
+                    pergunta2(
+                        "Quem é o maior jogador de futebol?",
+                        clickB5 = { meuNavController.navigate("/tela03") },
+                        clickB6 = { meuNavController.navigate("/tela01") }
                     )
                 }
                 composable("/tela03") {
                     // Views Composables
-                    Tela(
-                        "Tela 03",
-                        clickB1 = { meuNavController.navigate("/home") },
-                        clickB2 = { meuNavController.navigate("/tela01") }
+                    pergunta3(
+                        "Qual numero eu estou pensando?",
+                        clickB7 = { meuNavController.navigate("/tela02") },
+                        clickB8 = { meuNavController.navigate("/tela04") }
+                    )
+                }
+                composable("/tela04") {
+                    // Views Composables
+                    pergunta3(
+                        "Qual numero eu estou pensando?",
+                        clickB7 = { meuNavController.navigate("/home") },
+                        clickB8 = { meuNavController.navigate("/tela01") }
                     )
                 }
             }
